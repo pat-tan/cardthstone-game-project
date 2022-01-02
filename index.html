@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardthstone</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <div class="game-info-container" style="padding: 64px;">
+        <h1>Cardthstone</h1>
+        <div style="padding: 12px" id="wins">Wins 0</div>
+        <div style="padding: 12px" id="losses">Losses 0</div>
+        <div style="padding: 12px; width: 500px; border: solid" id="log">Press Start Game to Play</div>
+       
+        <button id="start" onclick="startGame()">Start Game</button>
+        <button id="hit" onclick="hit()" style="display: none">Battle</button>
+        <button id="stand" onclick="stand()" style="display: none">Stand</button>
+        <button id="reset" onclick="reload()">Reset</button>
+    </div>
+
+    <div class="game-container">
+        <div class="game-info-container">
+            
+        </div>
+
+        <div class="card visible">
+            <div class="card-back card-face">
+                <img class="card-bg" src="img/cardback.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-bg" src="img/3_of_hearts.png">
+            </div>
+        </div>
+
+        <div class="card visible">
+            <div class="card-back card-face">
+                <img class="card-bg" src="img/cardback.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-bg" src="img/3_of_hearts.png">
+            </div>
+        </div>
+
+        <div class="card visible">
+            <div class="card-back card-face">
+                <img class="card-bg" src="img/cardback.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-bg" src="img/3_of_hearts.png">
+            </div>
+        </div>
+
+        <div class="card visible">
+            <div class="card-back card-face">
+                <img class="card-bg" src="img/cardback.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-bg" src="img/3_of_hearts.png">
+            </div>
+        </div>
+
+        
+
+    </div>
+    <script src="deck.js"></script>
+
+</body>
+</html>
