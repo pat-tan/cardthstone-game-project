@@ -1,6 +1,8 @@
 
 # cardthstone-game-project
-Singeplayer Card Game with Influences from the Classic Game "War" and Blizzard Ent's Hearthstone\
+Singeplayer Card Game with Influences from the Classic Game "War" and Blizzard Ent's Hearthstone
+
+Created with Javascript, CSS, HTML and Font Awesome CSS
 
 Installation Instructions:
 Download zip, click Cardthstone folder, select index.html, right click and open with browser.
