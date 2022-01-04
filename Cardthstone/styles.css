@@ -1,0 +1,225 @@
+/* reference: https://youtu.be/NxRwIZWjLtE */
+*, *::after, *::before { 
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+}
+
+#wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+}
+
+.left {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.fa-leaf, .fa-spider, .fa-snowflake, .fa-circle {
+  animation: fall 10s linear forwards;
+  position: absolute;
+  top: -20px;
+}
+
+.fa-snowflake {
+  color: #fff;
+}
+
+.fa-circle {
+  color: pink;
+}
+
+.fa-leaf {
+  color: orange;
+}
+
+.fa-spider {
+  color: black;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(105vh);
+  }
+}
+
+.left #winter{
+  border: 2px solid black;
+  background-image: url("../img/winter.jpg");
+  background-size: cover;
+}
+
+.left #autumn{
+  border: 2px solid black;
+  background-image: url("../img/autumn.jpg");
+  background-size: cover;
+}
+
+.left #spring{
+  border: 2px solid black;
+  background-image: url("../img/spring.jpg");
+  background-size: cover;
+}
+
+
+#middle{
+  border: 2px solid black;
+  background-image: url("../img/sand.jpg");
+}
+
+.portrait-container{
+  /* margin: 0; */
+  display: flex;
+  justify-content: center;
+  margin-top: -100px;
+}
+
+.portrait {
+  margin: 0;
+  width: 175px;
+  height: 150px;
+  border-radius: 100% 100% 0 0;
+  background-color: black;
+  border: 4px dashed black;
+  margin-top: 130px;
+  overflow: hidden;
+}
+
+.player-portrait img {
+  transform: scaleX(-1);
+}
+
+.portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  overflow: hidden;
+  user-select: none;
+}
+
+.game-container {
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 7rem);
+  grid-template-rows:   10rem 2rem 10rem;
+  gap: .5rem;
+  cursor: pointer;
+  justify-content: center;
+  padding-top: 1rem;
+}
+
+.text {
+  grid-column: span 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+
+.card {
+  background-color: white;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  border: 1px solid black;
+  border-radius: .5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+  user-select: none;
+
+}
+
+.card.red {
+  color: red;
+}
+
+.card.black {
+  color: black;
+}
+
+.card::before,
+.card::after {
+  position: absolute;
+  content: attr(data-value);
+  font-size: 2rem;
+}
+
+.card::before {
+  top: .5rem;
+  left: .5rem
+}
+
+.card::after {
+  bottom: .5rem;
+  right: .5rem;
+  transform: rotate(180deg);
+}
+
+.right {
+  background-image: linear-gradient(rgb(165, 112, 42),rgb(236, 207, 170),rgb(165, 112, 42));
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.computer-container, .info-container, .player-container {
+  font-family: 'Pokemon Fire Red', sans-serif;
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay-text {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  display: none;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #FF6D00;
+  font-family: Creepy, serif;
+  transition: background-color 500ms, font-size 500ms;
+}
+
+.overlay-text-small {
+  font-size: .3em;
+}
+
+.overlay-text.visible {
+  display: flex;
+  animation: overlay-grow 500ms forwards;
+}
+
+@keyframes overlay-grow {
+  from {
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 0;
+  }
+  to {
+    background-color: rgba(0, 0, 0, .8);
+    font-size: 10em;
+  }
+}
+
+#wins, #losses {
+  user-select: none;
+  font-weight: bold;
+  font-size: 3em;
+}
+
+#wins {
+  color: green
+}
+
+#losses {
+  color: red
+}

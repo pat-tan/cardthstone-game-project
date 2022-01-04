@@ -1,0 +1,80 @@
+<!-- reference: https://youtu.be/NxRwIZWjLtE -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Cardthstone</title>
+  <script src="script.js" type="module"></script>
+  <script src="falling_animation.js" type="module"></script>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="css/all.css">
+
+</head>
+
+<body>
+  <div id="game-over-text" class="overlay-text">
+    GAME OVER
+    <span class="overlay-text-small">Click to Restart</span>
+  </div>
+  <div id="victory-text" class="overlay-text">
+    VICTORY
+    <span class="overlay-text-small">Click to Restart</span>
+  </div>
+
+  <div id="wrapper">
+
+    <div class ="left">
+      <div id="winter">
+        <i class="fas fa-spider fa-3x"></i>
+        <i class="fas fa-snowflake"></i>
+        <i class="fas fa-circle"></i>
+        <i class="fas fa-leaf" style="padding-left:15px;padding-top:15px;"></i>
+      </div>
+      <div id="spring"></div>
+      <div id="autumn"></div>
+    </div>
+
+    <div id ="middle">
+      <!-- <img src=../img/sand.jpg> -->
+      <div class = "portrait-container"> 
+        <div class="portrait">
+          <img src=../img/robot.jpg>
+        </div>
+      </div>
+
+      <div class="game-container">
+        <div class="computer-card-slot card-slot"></div>
+        <div class="computer-card-slot2 card-slot"></div>
+        <div class="text"></div>
+        <div class="player-card-slot card-slot"></div>
+        <div class="player-card-slot2 card-slot"></div>
+      </div>
+
+      <div class = "portrait-container"> 
+        <div class="player-portrait portrait">
+          <img src=../img/player.png>
+        </div>
+      </div>
+    </div>
+
+    <div class ="right">
+      <div class = "computer-container">
+        <div id="losses">COMPUTER WINS 0</div>
+      </div>
+      <div class = "info-container">
+        <p class = "p-info">
+          Click anywhere on the sand to start/continue the game. 
+          <br>
+          First to 5 WINS is the victor.
+        </p>
+      </div>
+      <div class = "player-container">
+        <div id="wins">PLAYER WINS 0</div>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
