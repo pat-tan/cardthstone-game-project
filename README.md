@@ -17,4 +17,6 @@ https://youtu.be/NxRwIZWjLtE
 <br>
 https://www.youtube.com/watch?v=28VfzEiJgy4
 
+Future Goals:
+Card Animations, Making the Computer React to Player's Inputs
 
